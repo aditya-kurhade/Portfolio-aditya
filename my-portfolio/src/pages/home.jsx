@@ -1,8 +1,15 @@
 import React from 'react'
+import HeroSection from '../components/HeroSection'
 
-const home = () => (
-    <h1>Home Page</h1>
+const home = () => {
+  return (
+    <div className="home-container">
+      <div className="hero-section-container">
+      <HeroSection />
+      </div>
+    </div>
   )
+}
 
 
 export default home
