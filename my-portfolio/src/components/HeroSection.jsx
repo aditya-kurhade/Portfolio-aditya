@@ -7,7 +7,7 @@ import { IoMdMail } from "react-icons/io";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section flex flex-col items-center justify-center text-center p-8 bg-gray-100 w-[400px] rounded-[20px] shadow-lg">
+    <div className="hero-section flex flex-col items-center justify-center text-center p-2 bg-gray-100 w-[400px] rounded-[20px] shadow-lg">
         <div>
             <img src="https://res.cloudinary.com/dbd5zow1e/image/upload/c_crop,ar_1:1/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg" alt="Hero Image" className="w-[300px]" />
         </div>
