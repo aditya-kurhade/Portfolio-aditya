@@ -1,9 +1,11 @@
 import React from 'react'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
+import githubImg from '../assets/Img/github.png';
+import linkedinImg from '../assets/Img/linkedin.png';
+import twitterImg from '../assets/Img/twitter.png';
+import instagramImg from '../assets/Img/instagram.png';
+import gmailImg from '../assets/Img/gmail.png';
+
+const iconHover = "transition-transform duration-200 hover:scale-125 hover:rotate-12";
 
 const HeroSection = () => {
   return (
@@ -19,27 +21,27 @@ const HeroSection = () => {
             <ul className="flex flex-row gap-6">
               <li>
                 <a href="https://github.com/aditya-kurhade" target="_blank" rel="noopener noreferrer">
-                  <FaGithub size={28} />
+                  <img src={githubImg} alt="GitHub" className={`w-6 h-6 ${iconHover}`} />
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/aditya-kurhade/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin size={28} />
+                  <img src={linkedinImg} alt="LinkedIn" className={`w-6 h-6 ${iconHover}`} />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/your-twitter-username" target="_blank" rel="noopener noreferrer">
-                  <BsTwitterX size={28} />
+                  <img src={twitterImg} alt="Twitter" className={`w-6 h-6 ${iconHover}`} />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/_aditya_kurhade_/" target="_blank" rel="noopener noreferrer">
-                  <FaSquareInstagram size={28} />
+                  <img src={instagramImg} alt="Instagram" className={`w-6 h-6 ${iconHover}`} />
                 </a>
               </li>
               <li>
                 <a href="mailto:adityakurhade1000@email.com" target="_blank" rel="noopener noreferrer">
-                  <IoMdMail size={28} />
+                  <img src={gmailImg} alt="Gmail" className={`w-6 h-6 ${iconHover}`} />
                 </a>
               </li>
             </ul>
