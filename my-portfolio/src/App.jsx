@@ -4,14 +4,17 @@ import Home from './pages/home.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
+
 const App = () => {
     return (
-        <BrowserRouter>
-            <Navbar />
-            <Routes>
-            <Route exact path="/" element={<Home />} />
-            </Routes>
-        </BrowserRouter>
+            <BrowserRouter>
+            
+                <Navbar />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                </Routes>
+            
+            </BrowserRouter>
     )
 }
 
