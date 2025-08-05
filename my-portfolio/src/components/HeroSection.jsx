@@ -9,6 +9,7 @@ const iconHover = "transition-transform duration-200 hover:scale-125 hover:rotat
 
 const HeroSection = () => {
   return (
+    <>
     <div className="hero-section flex flex-col items-center justify-center text-center p-2 bg-gray-100 w-[400px] rounded-[20px] shadow-lg">
         <div>
             <img src="https://res.cloudinary.com/dbd5zow1e/image/upload/c_crop,ar_1:1/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg" alt="Hero Image" className="w-[300px]" />
@@ -47,6 +48,11 @@ const HeroSection = () => {
             </ul>
         </div>
     </div>
+    <div className='hero-section flex flex-row justify-center items-center mt-4'>
+      
+
+    </div>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 import realtimeLocationImg from '../assets/Img/realtime location project banner img.avif';
+import aiPoweredCodeReviewerScreenshot from '../assets/Img/AI-Powered-Code-Reviewer-screenshot.png';
 
 const ProjectSection = () => {
   return (
@@ -15,18 +16,20 @@ const ProjectSection = () => {
         </div>
         <div className="project-list mt-6 flex flex-wrap gap-2">
             <div className="project-item p-2">
-                <img
-                  src={realtimeLocationImg}
-                  alt="Realtime Location Project"
-                  className="w-full h-60 object-cover rounded-md mb-2"
-                />
+                                 <a href='https://realtime-location-tracker-zpej.onrender.com' target='_blank' rel='noopener noreferrer'><img
+                   src={realtimeLocationImg}
+                   alt="Realtime Location Project"
+                   className="w-full h-60 object-cover rounded-md mb-2 transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+                 />
+                 </a>
             </div>
             <div className="project-item p-2 ">
-                <img
-                  src={realtimeLocationImg}
-                  alt="Realtime Location Project"
-                  className="w-full h-60 object-cover rounded-md mb-2"
-                />
+                                 <a href='https://ai-powered-code-reviwer.vercel.app' target='_blank' rel='noopener noreferrer'><img
+                   src={aiPoweredCodeReviewerScreenshot}
+                   alt="AI-Powered-Code-Reviewer"
+                   className="w-full h-60 object-cover rounded-md mb-2 transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+                 />
+                 </a>
             </div>
         </div>            
     </div>

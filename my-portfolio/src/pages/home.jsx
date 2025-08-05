@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection'
 import WorkExperinceSection from '../components/WorkExperinceSection'
 import ExpertSection from '../components/ExpertSection'
 import ProjectSection from '../components/ProjectSection'
+import ServiceSection from '../components/ServiceSection'
 
 
 const home = () => {
@@ -24,6 +25,9 @@ const home = () => {
       <div className="project-section-container">
       <ProjectSection />
       </div>
+    </div>
+    <div>
+      <div><ServiceSection /></div>
     </div>
     </>
   )
