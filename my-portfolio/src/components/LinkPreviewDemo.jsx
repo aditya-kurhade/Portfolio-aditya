@@ -2,18 +2,37 @@ import React from "react";
 import { LinkPreview } from "./ui/link-preview.jsx";
 
 const skills = [
+  // --- Frontend Frameworks & Libraries ---
   { name: "React", url: "https://react.dev/" },
+  { name: "Next.js", url: "https://nextjs.org/" },
+  { name: "Tailwind", url: "https://tailwindcss.com/" },
+  
+
+  // --- Backend & Server ---
   { name: "Node.js", url: "https://nodejs.org/" },
+  { name: "Express.js", url: "https://expressjs.com/" },
+
+  // --- Programming Languages ---
+  { name: "JavaScript", url: "https://www.javascript.com/" },
   { name: "Python", url: "https://www.python.org/" },
   { name: "C++", url: "https://isocpp.org/" },
-  { name: "JavaScript", url: "https://developer.mozilla.org/docs/Web/JavaScript" },
-  { name: "Bootstrap", url: "https://getbootstrap.com/" },
-  { name: "SQL", url: "https://www.w3schools.com/sql/" },
+
+  // --- Databases ---
+  { name: "SQL", url: "https://www.mysql.com/" },
   { name: "MongoDB", url: "https://www.mongodb.com/" },
-  { name: "Tableau", url: "https://www.tableau.com/" },
-  { name: "Power BI", url: "https://powerbi.microsoft.com/" },
-  { name: "Git", url: "https://git-scm.com/" },
-  { name: "GitHub", url: "https://github.com/" }
+
+  { name: "Bootstrap", url: "https://getbootstrap.com/" },
+  { name: "Acernity UI", url: "https://acernity-ui.vercel.app/" },
+  { name: "Framer Motion", url: "https://www.framer.com/motion/" },
+  { name: "Spline", url: "https://spline.design/" },
+
+  // --- AI / LLMs ---
+  { name: "Llama 4", url: "https://llama.meta.com/" },
+  { name: "Gemini", url: "https://deepmind.google/technologies/gemini/" },
+
+  // --- DevOps & Version Control ---
+  { name: "Docker", url: "https://www.docker.com/" },
+  { name: "GitHub", url: "https://github.com/" },
 ];
 
 // const colorClasses = [
@@ -40,10 +59,10 @@ export function LinkPreviewDemo() {
       >
         <p className="text-black">Aceternity UI</p>
       </LinkPreview> */}
-      <div className="flex flex-wrap gap-3 mt-6 justify-center">
+      <div className="flex flex-wrap gap-2 mt-1 mb-3">
         {skills.map(skill => (
-          <div key={skill.name} className="w-auto px-4 py-2 rounded-full border-2 border-gray-300 shadow
-              text-white font-semibold text-sm
+          <div key={skill.name} className="w-auto px-4 py-2 rounded-full border-1 border-gray-300 shadow
+              text-white  text-[12px] bg-white hover:bg-gray-100
               hover:scale-105 transition-transform duration-200
               whitespace-nowrap">
             <LinkPreview url={skill.url}>
