@@ -52,7 +52,31 @@
   }
 
   .animate-marquee {
-    animation: marquee 15s linear infinite;
+    animation: marquee 25s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+    will-change: transform;
+    /* overflow: hidden; */
+    /* width: 100%; */
+    box-sizing: border-box;
+    padding: 0 1rem;
+    text-overflow: ellipsis;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+    @media (max-width: 768px) {
+      animation: marquee 10s linear infinite;
+    }
+    @media (max-width: 480px) {
+      animation: marquee 5s linear infinite;
+    }
+    @media (max-width: 320px) {
+      animation: marquee 3s linear infinite;
+    }
+
+
+
   }
 }
 
