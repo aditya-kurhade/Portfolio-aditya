@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from '../components/HeroSection'
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaEnvelope, FaAward, FaRocket } from 'react-icons/fa'
+import ScrollLine from '../components/ScrollLine'
 
 const About = () => {
   const skills = [
@@ -34,24 +35,55 @@ const About = () => {
   ]
 
   return (
-    <div className="about flex flex-col lg:flex-row justify-center gap-10 py-16 px-6 bg-gradient-to-r from-gray-50 via-white to-gray-50 font-sans">
+    <div className="about flex flex-col lg:flex-row justify-center gap-10 py-16 px-6  font-sans">
+      {/* <ScrollLine /> */}
+
       
-      {/* Left: Profile / Hero */}
-      <div className="hero-container w-full lg:w-1/3 flex flex-col items-center">
-        <img 
-          src="https://via.placeholder.com/300" 
-          alt="Aditya Kurhade" 
-          className="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-blue-200"
-        />
-        <h2 className="mt-4 text-2xl font-bold text-blue-600 font-serif">Aditya Kurhade</h2>
-        <p className="text-gray-500 italic">Turning ideas into code & data into insights</p>
-        <button className="mt-5 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          Download CV
-        </button>
+      <div className="about-hero w-full lg:w-1/3 mb-8 lg:mb-0">
+      
+      <HeroSection />
       </div>
 
       {/* Right: About Content */}
       <div className="about-content w-full lg:w-2/3">
+
+      <section className=" text-white flex">
+      <div className="">
+        {/* Heading */}
+        <div className="text-center">
+         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 animate-pulse text-center">
+  🚀 Who's Building This?
+</h1>
+
+
+
+
+          <p className="text-lg sm:text-xl mt-4 mb-5 text-gray-300 italic">
+            Unpacking the mind behind the code.
+          </p>
+           <li>🚀 Tech Stack Highlights: <code className="bg-gray-800 px-2 py-1 rounded text-purple-400">Next.js</code>, <code className="bg-gray-800 px-2 py-1 rounded text-pink-400">Docker</code>, <code className="bg-gray-800 px-2 py-1 rounded text-yellow-400">Stripe SDK</code>, <code className="bg-gray-800 px-2 py-1 rounded text-blue-400">Kafka</code>, <code className="bg-gray-800 px-2 py-1 rounded text-green-400">Prisma</code>, and more.</li>
+        </div>
+          </div>
+        </section>
+
+
+
+      
+           
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         {/* Intro */}
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
