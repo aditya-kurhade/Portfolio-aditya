@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="bg-white shadow-md py-4 px-8 rounded-lg max-w-screen-xl mx-auto" >
+        <nav className="bg-white shadow-md  px-8 rounded-lg max-w-screen-xl mx-auto" >
             <div className="flex justify-between items-center w-full">
 
                 {/* Left - Logo */}
                 <div className="flex-shrink-0 text-black font-extrabold text-3xl tracking-wider">
-                    <Link to="/">AK</Link>
+                    <Link to="/"><img src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1754757199/Untitled_design_1_uldlee.png" alt="Logo" title="Aditya's Portfolio" loading="lazy" 
+                     className='w-20 h-20'/> </Link>
                 </div>
 
                 {/* Center - Nav Links */}
@@ -28,9 +29,9 @@ const Navbar = () => {
 
                 {/* Right - Button */}
                 <div className="flex-shrink-0">
-                    <button className="text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 shadow-md transition-all duration-300 rounded-md px-6 py-2 font-medium">
+                   <Link to="/contact"><button className="text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 shadow-md transition-all duration-300 rounded-md px-6 py-2 font-medium">
                         Let's Talk
-                    </button>
+                    </button></Link> 
                 </div>
             </div>
         </nav>

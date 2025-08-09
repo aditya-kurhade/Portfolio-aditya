@@ -2,52 +2,54 @@ import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import { useSwipeable } from 'react-swipeable'
+import { Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa'
 
-// ✅ Skill tree data
-const skillTree = [
-  {
-    tech: 'HTML',
-    level: 'Beginner',
-    emoji: '🌐',
-    image: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
-    projects: ['Personal Portfolio', 'Landing Pages']
-  },
-  {
-    tech: 'CSS',
-    level: 'Intermediate',
-    emoji: '🎨',
-    image: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
-    projects: ['Styled Components', 'Responsive Design']
-  },
-  {
-    tech: 'JavaScript',
-    level: 'Intermediate',
-    emoji: '⚙️',
-    image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
-    projects: ['Emoji Game', 'Match Game']
-  },
-  {
-    tech: 'React',
-    level: 'Advanced',
-    emoji: '⚛️',
-    image: 'https://cdn-icons-png.flaticon.com/512/919/919851.png',
-    projects: ['Password Manager', 'Routing Practice']
-  },
-  {
-    tech: 'MERN Stack',
-    level: 'Proficient',
-    emoji: '🚀',
-    image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*lstNQu_9sdcfE7W3lT_4qw.png',
-    projects: ['Full Stack Dashboard', 'Chat App']
-  },
-  {
-    tech: 'Next.js + AI',
-    level: 'Learning',
-    emoji: '🤖',
-    image: 'https://cdn.worldvectorlogo.com/logos/next-js.svg',
-    projects: ['AI Code Reviewer', 'Realtime Location Tracker']
-  }
-]
+// // ✅ Skill tree data
+// const skillTree = [
+//   {
+//     tech: 'HTML',
+//     level: 'Beginner',
+//     emoji: '🌐',
+//     image: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
+//     projects: ['Personal Portfolio', 'Landing Pages']
+//   },
+//   {
+//     tech: 'CSS',
+//     level: 'Intermediate',
+//     emoji: '🎨',
+//     image: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
+//     projects: ['Styled Components', 'Responsive Design']
+//   },
+//   {
+//     tech: 'JavaScript',
+//     level: 'Intermediate',
+//     emoji: '⚙️',
+//     image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+//     projects: ['Emoji Game', 'Match Game']
+//   },
+//   {
+//     tech: 'React',
+//     level: 'Advanced',
+//     emoji: '⚛️',
+//     image: 'https://cdn-icons-png.flaticon.com/512/919/919851.png',
+//     projects: ['Password Manager', 'Routing Practice']
+//   },
+//   {
+//     tech: 'MERN Stack',
+//     level: 'Proficient',
+//     emoji: '🚀',
+//     image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*lstNQu_9sdcfE7W3lT_4qw.png',
+//     projects: ['Full Stack Dashboard', 'Chat App']
+//   },
+//   {
+//     tech: 'Next.js + AI',
+//     level: 'Learning',
+//     emoji: '🤖',
+//     image: 'https://cdn.worldvectorlogo.com/logos/next-js.svg',
+//     projects: ['AI Code Reviewer', 'Realtime Location Tracker']
+//   }
+// ]
 
 const SkillTree = () => {
   const [selectedNode, setSelectedNode] = useState(null)
@@ -59,18 +61,29 @@ const SkillTree = () => {
   })
 
   return (
-    <div className="w-full py-10 px-4" {...swipeHandlers}>
+    <>
+    <div className="mb-6">
+        <Link
+          to="/"
+          className="inline-flex items-center m-10 gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
+        >
+          <FaArrowLeft /> Back to Home
+        </Link>
+      </div>
+
+
+    {/* <div className="w-full py-10 px-4" {...swipeHandlers}>
       {/* Skill Tree Title */}
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-400 mb-12">
+      {/* <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-400 mb-12">
         📈 My Skill Tree
-      </h2>
+      </h2>  */}
 
       {/* Vertical Skill Tree */}
-      <div className="flex flex-col items-center gap-10">
+      {/* <div className="flex flex-col items-center gap-10">
         {skillTree.map((node, index) => (
           <div key={index} className="relative group flex flex-col items-center">
             {/* Node Card */}
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white dark:bg-gray-900 shadow-md border border-gray-200 dark:border-gray-700 px-6 py-5 rounded-xl cursor-pointer text-center w-64"
@@ -80,10 +93,10 @@ const SkillTree = () => {
               <div className="text-3xl mb-1">{node.emoji}</div>
               <p className="text-sm text-gray-500 dark:text-gray-400">{node.level}</p>
               <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{node.tech}</h3>
-            </motion.div>
+            </motion.div> */}
 
             {/* Connector */}
-            {index < skillTree.length - 1 && (
+            {/* {index < skillTree.length - 1 && (
               <motion.div
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
@@ -93,8 +106,10 @@ const SkillTree = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
 
+
+   <div>
       {/* Why Work With Me Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -150,6 +165,7 @@ const SkillTree = () => {
         </Dialog.Panel>
       </Dialog>
     </div>
+    </>
   )
 }
 
