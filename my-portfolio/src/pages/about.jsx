@@ -55,6 +55,7 @@ const About = () => {
 
   return (
     <div className="about flex flex-col lg:flex-row justify-center gap-10 py-16 px-6 font-sans">
+      <h1>Delete after</h1>
 
       {/* Left Timeline */}
       {/* <div className="about-verticalTime w-full lg:w-2/5 mb-8 lg:mb-0 flex justify-center items-center ">
