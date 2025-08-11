@@ -59,22 +59,22 @@ const ProjectSection = () => {
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Roles of Responsibility</h3>
           <div className="space-y-3 text-sm text-gray-700">
-            <div className="flex items-center gap-2 hover:text-blue-600 cursor-pointer transition">
+            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaUsers />
               <p>ACM GHRECM President</p>
             </div>
 
-            <div className="flex items-center gap-2 hover:text-blue-600 cursor-pointer transition">
+            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaUserTie />
               <p>ToastMaster International</p>
             </div>
 
-            <div className="flex items-center gap-2 hover:text-blue-600 cursor-pointer transition">
+            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaComments />
               <p>Peer Counsellor</p>
             </div>
 
-            <div className="flex items-center gap-2 hover:text-blue-600 cursor-pointer transition">
+            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaLightbulb />
               <p>Innovative Problem Solver</p>
             </div>

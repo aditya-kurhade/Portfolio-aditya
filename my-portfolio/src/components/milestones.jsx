@@ -11,8 +11,12 @@ const Milestones = () => {
   ];
 
   const certifications = [
-    { title: "Full Stack Web Development - NxtWave", img: "/certifications/fullstack.png" },
-    { title: "Certified Python Programmer - NxtWave", img: "/certifications/python.png" },
+    { title: "Fossee Python  - IIT Bombay", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836054/Fossee_basic_python_page-0001_qhcli5.jpg" },
+    { title: "Certified Python Programmer - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Python_page-0001_t49avh.jpg" },
+    { title: "XPM 4.O - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/XPM_4.0_certificate_page-0001_onisjx.jpg" },
+    { title: "Teaching Assistent - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754835339/Teaching_Assistant_lkohb7.png" },
+    { title: "Responsive website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836016/Responsive_web_page-0001_pws9j2.jpg" },
+    { title: "Static Website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Static_web_page-0001_a78uln.jpg" },
     { title: "AWS Cloud Practitioner", img: "/certifications/aws.png" },
     { title: "React Developer - XYZ", img: "/certifications/react.png" },
   ];
@@ -60,7 +64,7 @@ const Milestones = () => {
               <img
                 src={cert.img}
                 alt={cert.title}
-                className="w-32 h-20 object-contain rounded-lg border border-gray-100 shadow-sm mb-3"
+                className="w-52 h-40 object-contain rounded-lg border border-gray-100 shadow-sm mb-3"
               />
               <p className="text-sm text-gray-700 font-medium">{cert.title}</p>
             </div>

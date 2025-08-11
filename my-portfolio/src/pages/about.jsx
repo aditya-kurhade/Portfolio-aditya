@@ -10,23 +10,24 @@ const About = () => {
 
   const stats = [
     { label: "Years Experience", value: "2+", color: "text-blue-500" },
-    { label: "Projects Completed", value: "15+", color: "text-green-500" },
+    { label: "Projects Completed", value: "10+", color: "text-green-500" },
     { label: "Coders Guided", value: "200+", color: "text-orange-500" },
   ];
 
   const achievements = [
     "Best ACM Member (Technical Team)",
     "1st Position - Web Development Competition",
-    "Smart India Hackathon 2024 Participant",
+    "Smart India Hackathon 2024 Finalist",
     "Peer Counsellor Certified"
   ];
 
   const certificationImages = [
-    { title: "Full Stack Web Development - NxtWave", img: "/certifications/fullstack.png" },
-    { title: "Certified Python Programmer - NxtWave", img: "/certifications/python.png" },
-    { title: "Certified Python Programmer - NxtWave", img: "/certifications/python.png" },
-    { title: "Certified Python Programmer - NxtWave", img: "/certifications/python.png" },
-    { title: "Certified Python Programmer - NxtWave", img: "/certifications/python.png" },
+    { title: "Fossee Python  - IIT Bombay", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836054/Fossee_basic_python_page-0001_qhcli5.jpg" },
+    { title: "Certified Python Programmer - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Python_page-0001_t49avh.jpg" },
+    { title: "XPM 4.O - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/XPM_4.0_certificate_page-0001_onisjx.jpg" },
+    { title: "Teaching Assistent - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754835339/Teaching_Assistant_lkohb7.png" },
+    { title: "Responsive website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836016/Responsive_web_page-0001_pws9j2.jpg" },
+    { title: "Static Website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Static_web_page-0001_a78uln.jpg" },
     { title: "AWS Cloud Practitioner", img: "/certifications/aws.png" },
     { title: "React Developer - XYZ", img: "/certifications/react.png" },
   ];
