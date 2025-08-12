@@ -85,10 +85,10 @@ const Project = () => {
   }, [autoPlay]);
 
   return (
-    <div className="w-full min-h-screen px-6 py-12 text-gray-900">
-      <div className="flex flex-col lg:flex-row gap-10 justify-center items-start">
+    <div className="w-full min-h-screen px-6 py-12  text-gray-900">
+      <div className="flex flex-col lg:flex-row gap-10  justify-center items-start">
         {/* Left Section */}
-        <div className="flex flex-col w-full lg:w-1/3 lg:flex-col gap-3 lg:gap-1">
+        <div className="flex flex-col w-full lg:w-1/3 lg:flex-col gap-3 lg:gap-1 ml-30 mt-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1
               initial={{ y: 16, opacity: 0 }}
@@ -133,7 +133,7 @@ const Project = () => {
           </div>
 
           {/* Project Tabs */}
-          <div className="w-full flex flex-wrap mx-auto justify-center gap-3 mt-4">
+          <div className="w-full flex flex-wrap mx-auto  gap-3 mt-4">
             {projectList.map((project) => (
               <motion.button
                 whileHover={{ scale: 1.05 }}
