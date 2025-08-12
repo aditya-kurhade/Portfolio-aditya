@@ -13,24 +13,24 @@ const workExperience = [
     logoSize: 'w-12 h-12',
     accent: 'border-l-4 border-blue-500'
   },
-  // {
-  //   id: 2,
-  //   year: '2024-2025',
-  //   company: 'GHRCEM ACM',
-  //   position: 'President',
-  //   logo: ghrcemLogo,
-  //   logoSize: 'w-12 h-12',
-  //   accent: 'border-l-4 border-purple-500'
-  // },
   {
-    id: 3,
-    year: '2023-2024',
-    company: 'Internshala',
-    position: 'ISP',
-    logo: internshalaLogo,
+    id: 2,
+    year: '2024-2025',
+    company: 'GHRCEM ACM',
+    position: 'President',
+    logo: ghrcemLogo,
     logoSize: 'w-12 h-12',
-    accent: 'border-l-4 border-teal-500'
+    accent: 'border-l-4 border-purple-500'
   },
+  // {
+  //   id: 3,
+  //   year: '2023-2024',
+  //   company: 'Internshala',
+  //   position: 'ISP',
+  //   logo: internshalaLogo,
+  //   logoSize: 'w-12 h-12',
+  //   accent: 'border-l-4 border-teal-500'
+  // },
   // {
   //   id: 4,
   //   year: '2023-2024',
