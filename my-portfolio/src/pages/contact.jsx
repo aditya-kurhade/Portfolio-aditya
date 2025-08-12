@@ -23,19 +23,23 @@ const Contact = () => {
         </p>
 
         {/* Contact Form */}
-        <form className="mt-8 space-y-5">
+        <form action="https://formspree.io/f/xjkolood"
+  method="POST" className="mt-8 space-y-5">
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-sm"
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
             className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-sm"
           />
           <textarea
             rows="4"
+            name="message"
             placeholder="Your Message..."
             className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-sm"
           ></textarea>
