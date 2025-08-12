@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Home from './pages/home.jsx';
@@ -7,8 +7,19 @@ import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Milestones from './components/milestones.jsx';
 import SkillTree from './components/SkillTree.jsx';
+import Loader from './components/loader.jsx';
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading or replace with your actual loading logic
+    const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds loader
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <div
       style={{
