@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiGooglemaps, SiTailwindcss, SiMongodb, SiOpenai } from "react-icons/si";
-import { FaFileAlt, FaQuestionCircle, FaCertificate, FaTrophy, FaLightbulb } from "react-icons/fa";
-import { FaUsers, FaUserTie, FaComments } from "react-icons/fa";
+import { FaFileAlt, FaQuestionCircle, FaCertificate, FaTrophy, FaLightbulb, FaUsers, FaUserTie, FaComments } from "react-icons/fa";
 
 import realtimeLocationImg from '../assets/Img/realtime location project banner img.avif';
 import aiPoweredCodeReviewerScreenshot from '../assets/Img/AI-Powered-Code-Reviewer-screenshot.png';
@@ -28,27 +27,27 @@ const projects = [
 
 const ProjectSection = () => {
   return (
-    <>
-      <div className="container flex flex-row bg-white border border-gray-200 rounded-xl p-6 w-[400px] ml-4 shadow-md gap-7">
+    <div className="space-y-4 max-w-full sm:max-w-md lg:max-w-lg mx-auto sm:mx-4">
+      
+      {/* Quick Links + Roles */}
+      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
-
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaFileAlt />
               <p>View Resume</p>
             </div>
-
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaQuestionCircle />
               <Link to="/skill-tree"><p>Why I’m the One?</p></Link>
             </div>
-
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaTrophy />
               <Link to="/milestones"><p>Achievements</p></Link>
             </div>
-
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaCertificate />
               <Link to="/milestones"><p>Certifications</p></Link>
@@ -56,6 +55,7 @@ const ProjectSection = () => {
           </div>
         </div>
 
+        {/* Roles of Responsibility */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Roles of Responsibility</h3>
           <div className="space-y-3 text-sm text-gray-700">
@@ -63,17 +63,14 @@ const ProjectSection = () => {
               <FaUsers />
               <p>ACM GHRECM President</p>
             </div>
-
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaUserTie />
               <p>ToastMaster International</p>
             </div>
-
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaComments />
               <p>Peer Counsellor</p>
             </div>
-
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
               <FaLightbulb />
               <p>Innovative Problem Solver</p>
@@ -82,8 +79,8 @@ const ProjectSection = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-md w-[400px] rounded-[10px] p-4 ml-4 mt-4">
-        {/* Header */}
+      {/* Recent Projects */}
+      <div className="bg-white shadow-md rounded-[10px] p-4">
         <div className="flex items-center mb-4">
           <h1 className="text-2xl font-bold font-roboto border-b-2 border-blue-500 pb-1">
             Recent Projects
@@ -95,7 +92,6 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        {/* Projects Grid */}
         <div className="flex flex-col gap-4">
           {projects.map((project, index) => (
             <a
@@ -105,14 +101,11 @@ const ProjectSection = () => {
               key={index}
               className="group relative rounded-md overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Project Image */}
               <img
                 src={project.img}
                 alt={project.name}
                 className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-
-              {/* Overlay on Hover */}
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
                 <h2 className="text-lg font-semibold">{project.name}</h2>
                 <p className="text-sm mt-1 px-4 text-center">{project.description}</p>
@@ -127,8 +120,8 @@ const ProjectSection = () => {
           ))}
         </div>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default ProjectSection;
+export default ProjectSection
