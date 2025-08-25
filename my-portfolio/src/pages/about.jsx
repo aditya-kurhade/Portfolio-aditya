@@ -63,13 +63,13 @@ const About = () => {
       {/* </div> */} 
 
       {/* Right Content */}
-      <div className="about-content w-full lg:w-2/3 p-6">
+      <div className="about-content w-full lg:w-2/3 p-6 mt-[-30px]">
 
         {/* Intro Section */}
         <section className="bg-white py-12 px-6 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 opacity-50 pointer-events-none"></div>
           <div className="relative max-w-4xl mx-auto mt-[-80px] text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 mt-10 tracking-tight">Behind the Code</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3  mt-12 tracking-tight">Behind the Code</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mb-6 shadow-md"></div>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed backdrop-blur-sm p-4 rounded-lg shadow-sm border border-gray-100">
               Hi, I’m <span className="font-semibold text-indigo-600">Aditya Kurhade</span>!  
@@ -91,7 +91,7 @@ const About = () => {
         </div>
 
         {/* Achievements */}
-<div className="mb-8">
+<div className="mt-12  w-75 lg:w-auto">
   <div className="flex items-center justify-between mb-3">
     <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
       <FaAward className="text-yellow-500" /> Achievements
@@ -104,7 +104,7 @@ const About = () => {
   <FaRocket className="text-[10px]" />
 </Link>
   </div>
-  <ul className="list-disc list-inside text-gray-600 text-sm">
+  <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
     {achievements.map((ach, index) => (
       <li key={index}>{ach}</li>
     ))}
@@ -112,16 +112,17 @@ const About = () => {
 </div>
 
 {/* Certifications Carousel */}
-<div className="mb-8 relative">
+<div className="mt-8   w-75 lg:w-auto">
   <div className="flex items-center justify-between mb-3">
     <h3 className="text-xl font-semibold text-gray-800">Certifications</h3>
-  </div>
-  <button
+    <button
     onClick={() => setIsPlaying(!isPlaying)}
-    className="absolute right-2 top-2 text-gray-500 hover:text-gray-800 text-xs p-1 rounded-full bg-white shadow-sm border border-gray-200 z-10"
+    className="text-gray-500 hover:text-gray-800 text-xs p-1 rounded-full bg-white shadow-sm border border-gray-200 z-10"
   >
     {isPlaying ? <FaPause /> : <FaPlay />}
   </button>
+  </div>
+  
 
   <div
     ref={scrollRef}
@@ -143,7 +144,7 @@ const About = () => {
 
 
         {/* Timeline */}
-        <div className="mb-8">
+        <div className="mt-8 ">
           <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <FaRocket className="text-blue-500" /> My Journey
           </h3>
@@ -158,7 +159,7 @@ const About = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex gap-6">
+        <div className="flex gap-6 mt-8">
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl"><FaLinkedin /></a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-black text-2xl"><FaGithub /></a>
           <a href="mailto:adityakurhade1000@gmail.com" className="text-red-500 hover:text-red-700 text-2xl"><FaEnvelope /></a>

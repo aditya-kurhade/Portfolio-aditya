@@ -4,6 +4,7 @@ import linkedinImg from '../assets/Img/linkedin.png';
 import twitterImg from '../assets/Img/twitter.png';
 import instagramImg from '../assets/Img/instagram.png';
 import gmailImg from '../assets/Img/gmail.png';
+import ShortBanner from './ShortBanner';
 
 const iconHover = "transition-transform duration-200 hover:scale-125 hover:rotate-12";
 
@@ -17,20 +18,22 @@ const HeroSection = () => {
   return (
     <div
       className="hero-section flex flex-col items-center justify-center text-center p-6 sm:p-8 w-full max-w-sm sm:max-w-md lg:max-w-lg 
-                 rounded-[10px] shadow-lg border border-gray-200
+                 rounded-[10px] shadow-lg border border-gray-200 m-0
                  opacity-0 translate-y-6 animate-fade-slide-up bg-white"
     >
       {/* Profile Image */}
-      <div className="w-full max-w-[300px] h-auto p-4 overflow-hidden">
+     <div className='w-80'>
         <img
           src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg"
           alt="Aditya Kurhade"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-80 object-cover rounded-lg"
         />
+        <div className='w-2/5 ml-50 mt-[-30px]'><ShortBanner text="View Resume" link="" /></div>
       </div>
+     
 
       {/* Headline */}
-      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mt-5">
         Hi, I'm <span className="text-blue-600">Aditya Kurhade</span>
       </h1>
 

@@ -33,9 +33,9 @@ const workExperience = [
 
 const WorkExperinceSection = () => {
   return (
-    <div className="bg-white shadow-md w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-lg p-4 sm:p-6 overflow-hidden">
+    <div className="bg-white shadow-md w-full  max-w-sm sm:max-w-md lg:max-w-lg rounded-lg lg:h-80 sm:p-3 overflow-hidden">
       {/* Section Title */}
-      <h1 className="text-xl sm:text-2xl font-bold border-b border-gray-200 pb-2 mb-3">
+      <h1 className="text-xl sm:text-2xl font-bold border-b border-gray-200 m-3 pb-2">
         Work Experience
       </h1>
 
@@ -53,6 +53,7 @@ const WorkExperinceSection = () => {
               </div>
 
               {/* Logo */}
+              <div className='flex flex-row ml-17 lg:ml-17'>
               <div className="flex-shrink-0">
                 <img
                   src={exp.logo}
@@ -62,13 +63,14 @@ const WorkExperinceSection = () => {
               </div>
 
               {/* Company Info */}
-              <div className="flex flex-col">
+              <div className="flex flex-col ">
                 <h2 className="font-semibold text-gray-800 text-sm sm:text-base">
                   {exp.company}
                 </h2>
                 <p className="text-gray-500 text-xs sm:text-sm">
                   {exp.position}
                 </p>
+              </div>
               </div>
             </div>
           ))}

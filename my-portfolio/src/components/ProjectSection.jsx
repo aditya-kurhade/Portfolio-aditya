@@ -30,10 +30,10 @@ const ProjectSection = () => {
     <div className="space-y-4 max-w-full sm:max-w-md lg:max-w-lg mx-auto sm:mx-4">
       
       {/* Quick Links + Roles */}
-      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="flex flex-col lg:flex-row lg:gap-3 bg-white border border-gray-200 rounded-xl p-6 shadow-md  ">
         
         {/* Quick Links */}
-        <div>
+        <div className='lg:w-40'>
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
@@ -56,7 +56,7 @@ const ProjectSection = () => {
         </div>
 
         {/* Roles of Responsibility */}
-        <div>
+        <div className='mt-5 lg:mt-0'>
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Roles of Responsibility</h3>
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition">
