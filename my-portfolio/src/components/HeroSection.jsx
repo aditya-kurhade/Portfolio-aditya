@@ -9,10 +9,15 @@ import ShortBanner from './ShortBanner';
 const iconHover = "transition-transform duration-200 hover:scale-125 hover:rotate-12";
 
 const specialties = [
-  { name: "Full Stack Development", color: "bg-blue-600" },
-  { name: "AI Tools", color: "bg-purple-600" },
-  { name: "Cloud & DevOps", color: "bg-orange-500" }
+  { name: "Full Stack Dev", color: "bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "Data Analytics", color: "bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "ML Engineer", color: "bg-gradient-to-r from-purple-500 to-purple-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "AI Tools", color: "bg-gradient-to-r from-pink-500 to-pink-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" }
 ];
+
+
+
+
 
 const HeroSection = () => {
   return (
@@ -22,24 +27,32 @@ const HeroSection = () => {
                  opacity-0 translate-y-6 animate-fade-slide-up bg-white"
     >
       {/* Profile Image */}
-     <div className='w-80'>
-        <img
-          src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg"
-          alt="Aditya Kurhade"
-          className="w-full h-80 object-cover rounded-lg"
-        />
-        <div className='w-2/5 ml-50 mt-[-30px]'><ShortBanner text="View Resume" link="" /></div>
-      </div>
+    {/* Profile Image */}
+<div className="w-80 relative">
+  <img
+    src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg"
+    alt="Aditya Kurhade"
+    className="w-full h-80 object-cover rounded-lg"
+  />
+
+  {/* View Resume Banner */}
+  <div className="absolute bottom-3 right-3">
+    <ShortBanner text="View Resume" link="https://drive.google.com/file/d/1CKVGVFeL1hrWc-utguJ7Ey_VUNK54orE/view?usp=drive_link" />
+  </div>
+</div>
+
      
 
       {/* Headline */}
       <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mt-5">
         Hi, I'm <span className="text-blue-600">Aditya Kurhade</span>
+        
+
       </h1>
 
       {/* Subheading */}
       <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
-        Turning complex problems into efficient, real-world-ready applications.
+        Full Stack Solutions, Data-Driven Insights
       </p>
 
       {/* Specialties */}

@@ -5,6 +5,7 @@ import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiGooglemaps, SiTailwindcss, SiMongodb, SiOpenai } from "react-icons/si";
 import { FaFileAlt, FaQuestionCircle, FaCertificate, FaTrophy, FaLightbulb, FaUsers, FaUserTie, FaComments } from "react-icons/fa";
 
+
 import realtimeLocationImg from '../assets/Img/realtime location project banner img.avif';
 import aiPoweredCodeReviewerScreenshot from '../assets/Img/AI-Powered-Code-Reviewer-screenshot.png';
 
@@ -38,11 +39,13 @@ const ProjectSection = () => {
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaFileAlt />
-              <p>View Resume</p>
+              <a href="https://drive.google.com/file/d/1CKVGVFeL1hrWc-utguJ7Ey_VUNK54orE/view?usp=drive_link" target="_blank" rel="noreferrer">
+        View Resume
+      </a>
             </div>
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaQuestionCircle />
-              <Link to="/skill-tree"><p>Why I’m the One?</p></Link>
+              <Link to="/why-work-with-me"><p>Why I’m the One?</p></Link>
             </div>
             <div className="flex items-center gap-2 hover:text-blue-600 hover:underline cursor-pointer transition">
               <FaTrophy />

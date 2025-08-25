@@ -5,6 +5,7 @@ import ExpertSection from '../components/ExpertSection'
 import ProjectSection from '../components/ProjectSection'
 import ScrollingBanner from '../components/ScrollingBanner'
 
+
 const Home = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const Home = () => {
           <div className="main2-section flex flex-col md:flex-row mt-5 lg:mt-0 gap-5 lg:w-210">
             
             {/* Hero Section */}
-            <div className="hero-section-container p-0 w-full md:w-1/2 lg:mt-[-22px]">
+            <div className="hero-section-container p-0 w-full md:w-1/2 lg:mt-[-25px]">
               <HeroSection />
             </div>
 

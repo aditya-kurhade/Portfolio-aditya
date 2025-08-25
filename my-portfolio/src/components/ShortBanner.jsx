@@ -1,11 +1,17 @@
 import React from 'react'
 
-const ShortBanner = (props) => {
+const ShortBanner = ({ text, link }) => {
   return (
-    <div className=' pt-0.5 pb-0.5 pl-2 pr-2 bg-blue-500  rounded-md border-white   '>
-        <a href={props.link} ><h1>{props.text}</h1></a>     
-    </div>
-  )
-}
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="bg-white text-blue-600 font-semibold px-3 py-1 rounded-md shadow-md 
+                 hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300"
+    >
+      {text}
+    </a>
+  );
+};
 
 export default ShortBanner

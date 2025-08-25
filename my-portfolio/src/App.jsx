@@ -6,8 +6,9 @@ import Project from './pages/project.jsx';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Milestones from './components/milestones.jsx';
-import SkillTree from './components/SkillTree.jsx';
 import Loader from './components/loader.jsx';
+import WhyWorkWithMe from './components/WhyWorkWithMe.jsx';
+import UnderDevelopment from './pages/UnderDevelopment.jsx';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -44,7 +45,7 @@ const App = () => {
             element={
               <>
                 <div className="pt-10"><Navbar /></div>
-                <Project />
+                <UnderDevelopment />
               </>
             }
           />
@@ -69,7 +70,7 @@ const App = () => {
 
           {/* Route without Navbar */}
           <Route path="/milestones" element={<Milestones />} />
-          <Route path="/skill-tree" element={<SkillTree />} />
+          <Route path="/why-work-with-me" element={<WhyWorkWithMe />} />
         </Routes>
       </BrowserRouter>
     </div>
