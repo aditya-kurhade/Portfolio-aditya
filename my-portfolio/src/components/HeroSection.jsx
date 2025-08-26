@@ -9,9 +9,9 @@ import ShortBanner from './ShortBanner';
 const iconHover = "transition-transform duration-200 hover:scale-125 hover:rotate-12";
 
 const specialties = [
-  { name: "Full Stack Dev", color: "bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
-  { name: "Data Analytics", color: "bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
-  { name: "ML Engineer", color: "bg-gradient-to-r from-purple-500 to-purple-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "Full Stack Development", color: "bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "Blockchain", color: "bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  // { name: "ML Engineer", color: "bg-gradient-to-r from-purple-500 to-purple-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
   { name: "AI Tools", color: "bg-gradient-to-r from-pink-500 to-pink-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" }
 ];
 
@@ -30,7 +30,7 @@ const HeroSection = () => {
     {/* Profile Image */}
 <div className="w-80 relative">
   <img
-    src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1738689136/IMG_20240317_195721_2_r1mkd4.jpg"
+    src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1756201420/IMG-20250419-WA0044_1_crtvjb.jpg"
     alt="Aditya Kurhade"
     className="w-full h-80 object-cover rounded-lg"
   />

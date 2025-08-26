@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTools } from 'react-icons/fa';
 
+
 const UnderDevelopment = () => {
   return (
+    <>
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4 sm:px-6 lg:px-20">
       {/* Main Content */}
       <motion.div
@@ -30,6 +32,8 @@ const UnderDevelopment = () => {
         </p>
       </motion.div>
     </div>
+    
+    </>
   );
 };
 

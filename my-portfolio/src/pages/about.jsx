@@ -28,9 +28,10 @@ const About = () => {
     { title: "Teaching Assistent - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754835339/Teaching_Assistant_lkohb7.png" },
     { title: "Responsive website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836016/Responsive_web_page-0001_pws9j2.jpg" },
     { title: "Static Website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Static_web_page-0001_a78uln.jpg" },
-    { title: "AWS Cloud Practitioner", img: "/certifications/aws.png" },
-    { title: "React Developer - XYZ", img: "/certifications/react.png" },
   ];
+
+  // Duplicate list for infinite scroll
+  const loopCertifications = [...certificationImages, ...certificationImages];
 
   const timeline = [
     { year: "2023", text: "Started learning Full Stack Development" },
@@ -39,28 +40,27 @@ const About = () => {
     { year: "2025", text: "Building Data Science & Web3 skills" },
   ];
 
-  // Auto-scroll effect
+  // Auto-scroll effect (seamless infinite loop)
   useEffect(() => {
     if (!isPlaying) return;
+    const scrollContainer = scrollRef.current;
+
     const scrollInterval = setInterval(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += 1; // smooth scrolling speed
-        if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
-          scrollRef.current.scrollLeft = 0; // seamless loop
+      if (scrollContainer) {
+        scrollContainer.scrollLeft += 1;
+
+        // Reset when halfway → infinite loop
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
         }
-      }   
-    }, 15); // smaller value = faster
+      }
+    }, 15);
 
     return () => clearInterval(scrollInterval);
   }, [isPlaying]);
 
   return (
     <div className="about flex flex-col lg:flex-row justify-center gap-10 py-16 px-6 font-sans">
-
-      {/* Left Timeline */}
-      {/* <div className="about-verticalTime w-full lg:w-2/5 mb-8 lg:mb-0 flex justify-center items-center ">
-        {/* <VerticalTimeline /> */}
-      {/* </div> */} 
 
       {/* Right Content */}
       <div className="about-content w-full lg:w-2/3 p-6 mt-[-30px]">
@@ -91,57 +91,55 @@ const About = () => {
         </div>
 
         {/* Achievements */}
-<div className="mt-12  w-75 lg:w-auto">
-  <div className="flex items-center justify-between mb-3">
-    <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-      <FaAward className="text-yellow-500" /> Achievements
-    </h3>
-    <Link
-  to="/milestones"
-  className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 transition-colors duration-200"
->
-  View All
-  <FaRocket className="text-[10px]" />
-</Link>
-  </div>
-  <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
-    {achievements.map((ach, index) => (
-      <li key={index}>{ach}</li>
-    ))}
-  </ul>
-</div>
+        <div className="mt-12  w-75 lg:w-auto">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+              <FaAward className="text-yellow-500" /> Achievements
+            </h3>
+            <Link
+              to="/milestones"
+              className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 transition-colors duration-200"
+            >
+              View All
+              <FaRocket className="text-[10px]" />
+            </Link>
+          </div>
+          <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
+            {achievements.map((ach, index) => (
+              <li key={index}>{ach}</li>
+            ))}
+          </ul>
+        </div>
 
-{/* Certifications Carousel */}
-<div className="mt-8   w-75 lg:w-auto">
-  <div className="flex items-center justify-between mb-3">
-    <h3 className="text-xl font-semibold text-gray-800">Certifications</h3>
-    <button
-    onClick={() => setIsPlaying(!isPlaying)}
-    className="text-gray-500 hover:text-gray-800 text-xs p-1 rounded-full bg-white shadow-sm border border-gray-200 z-10"
-  >
-    {isPlaying ? <FaPause /> : <FaPlay />}
-  </button>
-  </div>
-  
+        {/* Certifications Carousel */}
+        <div className="mt-8 w-75 lg:w-auto">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-xl font-semibold text-gray-800">Certifications</h3>
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="text-gray-500 hover:text-gray-800 text-xs p-1 rounded-full bg-white shadow-sm border border-gray-200 z-10"
+            >
+              {isPlaying ? <FaPause /> : <FaPlay />}
+            </button>
+          </div>
 
-  <div
-    ref={scrollRef}
-    className="flex gap-6 overflow-x-auto scrollbar-hide px-3 py-6  border border-gray-200 rounded-lg bg-white shadow-inner"
-    style={{ scrollBehavior: "smooth" }}
-  >
-    {certificationImages.map((cert, idx) => (
-      <div key={idx} className="flex-shrink-0 w-40 flex flex-col items-center text-center">
-        <img
-          src={cert.img}
-          alt={cert.title}
-          className="w-32 h-20 object-contain rounded-md border border-gray-100 shadow-sm"
-        />
-        <p className="mt-2 text-[11px] text-gray-700 leading-tight font-medium">{cert.title}</p>
-      </div>
-    ))}
-  </div>
-</div>
-
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide px-3 py-6 border border-gray-200 rounded-lg bg-white shadow-inner"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {loopCertifications.map((cert, idx) => (
+              <div key={idx} className="flex-shrink-0 w-40 flex flex-col items-center text-center">
+                <img
+                  src={cert.img}
+                  alt={cert.title}
+                  className="w-32 h-20 object-contain rounded-md border border-gray-100 shadow-sm"
+                />
+                <p className="mt-2 text-[11px] text-gray-700 leading-tight font-medium">{cert.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Timeline */}
         <div className="mt-8 ">
@@ -160,8 +158,8 @@ const About = () => {
 
         {/* Social Links */}
         <div className="flex gap-6 mt-8">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl"><FaLinkedin /></a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-black text-2xl"><FaGithub /></a>
+          <a href="https://github.com/aditya-kurhade" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl"><FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/aditya-kurhade/" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-black text-2xl"><FaGithub /></a>
           <a href="mailto:adityakurhade1000@gmail.com" className="text-red-500 hover:text-red-700 text-2xl"><FaEnvelope /></a>
         </div>
 
