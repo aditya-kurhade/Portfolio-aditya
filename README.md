@@ -4,7 +4,7 @@ Welcome to my personal portfolio website built with **React** and **Vite**.
 
 ## 🚀 Live Demo
 
-[https://portfolio-aditya-phi.vercel.app/](https://portfolio-aditya-phi.vercel.app/)
+[https://portfolio-aditya-phi.vercel.app/](https://portfolio-aditya03.vercel.app/)
 
 ## 📝 Features
 
