@@ -17,8 +17,6 @@ const Milestones = () => {
     { title: "Teaching Assistent - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754835339/Teaching_Assistant_lkohb7.png" },
     { title: "Responsive website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836016/Responsive_web_page-0001_pws9j2.jpg" },
     { title: "Static Website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Static_web_page-0001_a78uln.jpg" },
-    // { title: "AWS Cloud Practitioner", img: "/certifications/aws.png" },
-    // { title: "React Developer - XYZ", img: "/certifications/react.png" },
   ];
 
   return (
