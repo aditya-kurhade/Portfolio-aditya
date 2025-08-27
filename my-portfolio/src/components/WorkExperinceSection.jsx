@@ -35,7 +35,7 @@ const WorkExperinceSection = () => {
   return (
     <div className="bg-white shadow-md w-full  max-w-sm sm:max-w-md lg:max-w-lg rounded-lg lg:h-80 sm:p-3 overflow-hidden">
       {/* Section Title */}
-      <h1 className="text-xl sm:text-2xl font-bold border-b border-gray-200 m-3 pb-2">
+      <h1 className="text-xl sm:text-2xl font-bold border-b border-gray-200 font-roboto m-1 pb-3">
         Work Experience
       </h1>
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope, FaAward, FaRocket, FaPlay, FaPause } from 'react-icons/fa';
-import VerticalTimeline from '../components/VerticalTimeline';
+import Footer from "../components/Footer" 
 
 const About = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -60,6 +60,7 @@ const About = () => {
   }, [isPlaying]);
 
   return (
+    <>
     <div className="about flex flex-col lg:flex-row justify-center gap-10 py-16 px-6 font-sans">
 
       {/* Right Content */}
@@ -165,6 +166,8 @@ const About = () => {
 
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

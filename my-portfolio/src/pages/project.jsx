@@ -6,6 +6,8 @@ import { FaPlay, FaPause } from 'react-icons/fa';
 import realtimeLocationTrackerImg from '../assets/Img/realtime location project banner img.avif';
 import aipoweredCodeReviewerImg from '../assets/Img/AI-Powered-Code-Reviewer-screenshot.png';
 
+import Footer from "../components/Footer" 
+
 const projectList = [
   {
     name: 'Jobby',
@@ -85,6 +87,7 @@ const Project = () => {
   }, [autoPlay]);
 
   return (
+    <>
     <div className="w-full min-h-screen px-6 py-12  text-gray-900">
       <div className="flex flex-col lg:flex-row gap-10  justify-center items-start">
         {/* Left Section */}
@@ -187,6 +190,8 @@ const Project = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

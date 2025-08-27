@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { FiHome, FiUser, FiFolder, FiMail } from "react-icons/fi"; // ✅ Feather Icons
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  const navLinks = ["Home", "About", "Project", "Contact"];
+  const navLinks = [
+    { name: "Home", path: "/", icon: <FiHome className="inline mr-2" /> },
+    { name: "About", path: "/about", icon: <FiUser className="inline mr-2" /> },
+    { name: "Project", path: "/project", icon: <FiFolder className="inline mr-2" /> },
+    { name: "Contact", path: "/contact", icon: <FiMail className="inline mr-2" /> },
+  ];
 
   return (
     <nav className="bg-white shadow-md px-4 sm:px-8 rounded-lg max-w-screen-xl mx-auto">
@@ -25,18 +32,29 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-lg font-medium text-gray-600">
-          {navLinks.map((item, index) => (
-            <li key={index}>
-              <Link
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative hover:text-black transition-colors duration-200 group"
-              >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li>
-          ))}
+        <ul className="hidden md:flex gap-8 text-lg font-medium">
+          {navLinks.map((item, index) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <li key={index}>
+                <Link
+                  to={item.path}
+                  className={`relative transition-colors duration-200 group flex items-center 
+                    ${
+                      isActive
+                        ? "text-blue-600 font-semibold"
+                        : "text-gray-600 hover:text-black"
+                    }`}
+                >
+                  {item.icon} {item.name}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-blue-500 transition-all duration-300 
+                    ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                  ></span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Desktop Button */}
@@ -60,16 +78,21 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden mt-4 flex flex-col gap-4 text-gray-700 font-medium">
-          {navLinks.map((item, index) => (
-            <Link
-              key={index}
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="hover:text-blue-500"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </Link>
-          ))}
+          {navLinks.map((item, index) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <Link
+                key={index}
+                to={item.path}
+                className={`flex items-center transition-colors duration-200 ${
+                  isActive ? "text-blue-600 font-semibold" : "hover:text-blue-500"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.icon} {item.name}
+              </Link>
+            );
+          })}
           <Link to="/contact" onClick={() => setIsOpen(false)}>
             <button className="w-full text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 shadow-md transition-all duration-300 rounded-md px-6 py-2 font-medium">
               Let's Talk

@@ -4,6 +4,7 @@ import WorkExperinceSection from '../components/WorkExperinceSection'
 import ExpertSection from '../components/ExpertSection'
 import ProjectSection from '../components/ProjectSection'
 import ScrollingBanner from '../components/ScrollingBanner'
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -46,6 +47,7 @@ const Home = () => {
         </div>
 
       </div>
+      <Footer />
     </>
   )
 }
