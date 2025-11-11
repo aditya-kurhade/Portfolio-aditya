@@ -1,4 +1,3 @@
-import React from 'react';
 import githubImg from '../assets/Img/github.png';
 import linkedinImg from '../assets/Img/linkedin.png';
 import twitterImg from '../assets/Img/twitter.png';
@@ -10,8 +9,9 @@ const iconHover = "transition-transform duration-200 transform-gpu hover:scale-1
 
 const specialties = [
   { name: "Full Stack Development", color: "bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
-  { name: "Blockchain", color: "bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
-  { name: "AI Tools", color: "bg-gradient-to-r from-pink-500 to-pink-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" }
+  { name: "Data Science", color: "bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "AI Tools", color: "bg-gradient-to-r from-pink-500 to-pink-700 hover:scale-105 hover:shadow-lg transition-transform duration-300" },
+  { name: "AI Integration", color: "bg-gradient-to-r from-orange-400 to-red-600 hover:scale-105 hover:shadow-lg transition-transform duration-300"}
 ];
 
 const HeroSection = () => {
@@ -24,7 +24,7 @@ const HeroSection = () => {
       {/* Profile Image */}
       <div className="w-80 relative">
         <img
-          src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1756201420/IMG-20250419-WA0044_1_crtvjb.jpg"
+          src="https://res.cloudinary.com/dbd5zow1e/image/upload/v1762866929/aditya_passport_vc5zpy.jpg"
           alt="Aditya Kurhade"
           className="w-full h-80 object-cover rounded-lg"
         />
