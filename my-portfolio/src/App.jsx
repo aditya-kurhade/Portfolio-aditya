@@ -8,7 +8,8 @@ import Contact from './pages/contact.jsx';
 import Milestones from './components/milestones.jsx';
 import Loader from './components/loader.jsx';
 import WhyWorkWithMe from './components/WhyWorkWithMe.jsx';
-import UnderDevelopment from './pages/UnderDevelopment.jsx';
+
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -45,7 +46,7 @@ const App = () => {
             element={
               <>
                 <div className="pt-10"><Navbar /></div>
-                <UnderDevelopment />
+                <Project />
               </>
             }
           />
