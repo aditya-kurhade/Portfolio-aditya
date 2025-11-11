@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Milestones = () => {
   const achievements = [
+    "GFG Ideathon Winner",
     "Best ACM Member (Technical Team)",
     "1st Position - Web Development Competition",
     "Smart India Hackathon 2024 Finalist",
