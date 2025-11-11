@@ -6,22 +6,19 @@ import { SiGooglemaps, SiTailwindcss, SiMongodb, SiOpenai } from "react-icons/si
 import { FaFileAlt, FaQuestionCircle, FaCertificate, FaTrophy, FaLightbulb, FaUsers, FaUserTie, FaComments } from "react-icons/fa";
 
 
-import realtimeLocationImg from '../assets/Img/realtime location project banner img.avif';
-import aiPoweredCodeReviewerScreenshot from '../assets/Img/AI-Powered-Code-Reviewer-screenshot.png';
-
 const projects = [
   {
-    name: "Realtime Location Tracker",
-    img: realtimeLocationImg,
-    link: "https://realtime-location-tracker-zpej.onrender.com",
-    description: "Track live locations in real-time with Google Maps API.",
+    name: "MindConnect",
+      link: "https://mind-connect-brown.vercel.app",
+      img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1762870080/Screenshot_2025-11-11_192533_rgzkut.png",
+    description: "A mental health platform connecting users to therapists.",
     tech: [<FaReact />, <FaNodeJs />, <SiGooglemaps />, <SiTailwindcss />]
   },
   {
-    name: "AI-Powered Code Reviewer",
-    img: aiPoweredCodeReviewerScreenshot,
-    link: "https://ai-powered-code-reviwer.vercel.app",
-    description: "AI tool to review and improve your code instantly.",
+    name: "NxtWatch",
+      link: "https://nxtwatch003.ccbp.tech",
+      img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1762870081/Screenshot_2025-11-11_192727_zlcqve.png",
+    description: "A video streaming platform with personalized recommendations.",
     tech: [<FaReact />, <FaNodeJs />, <SiMongodb />, <SiOpenai />]
   }
 ];
