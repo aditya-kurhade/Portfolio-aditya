@@ -4,7 +4,7 @@ import { LinkPreview } from "./ui/link-preview.jsx";
 const skills = [
   // --- Frontend Frameworks & Libraries ---
   { name: "React", url: "https://react.dev/" },
-  { name: "Next.js", url: "https://nextjs.org/" },
+  // { name: "Next.js", url: "https://nextjs.org/" },
   { name: "Tailwind", url: "https://tailwindcss.com/" },
   
 
@@ -31,7 +31,7 @@ const skills = [
   { name: "Gemini", url: "https://deepmind.google/technologies/gemini/" },
 
   // --- DevOps & Version Control ---
-  { name: "Docker", url: "https://www.docker.com/" },
+  { name: "Firebase", url: "https://firebase.google.com/" },
   { name: "GitHub", url: "https://github.com/" },
 ];
 
