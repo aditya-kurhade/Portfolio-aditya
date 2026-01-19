@@ -86,7 +86,7 @@ const ProjectSection = () => {
             Recent Projects
           </h1>
           <div className="ml-auto flex items-center text-gray-500 hover:text-blue-500 transition-colors duration-300">
-            <Link to="/project" className="flex items-center gap-1 font-medium">
+            <Link to="/under-development" className="flex items-center gap-1 font-medium">
               All Projects <FaArrowRightLong />
             </Link>
           </div>
