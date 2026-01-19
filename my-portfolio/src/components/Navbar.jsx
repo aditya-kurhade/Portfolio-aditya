@@ -10,7 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/", icon: <FiHome className="inline mr-2" /> },
     { name: "About", path: "/about", icon: <FiUser className="inline mr-2" /> },
-    { name: "Project", path: "/project", icon: <FiFolder className="inline mr-2" /> },
+    { name: "Project", path: "/under-development", icon: <FiFolder className="inline mr-2" /> },
     { name: "Contact", path: "/contact", icon: <FiMail className="inline mr-2" /> },
   ];
 
