@@ -8,6 +8,7 @@ import Contact from './pages/contact.jsx';
 import Milestones from './components/milestones.jsx';
 import Loader from './components/loader.jsx';
 import WhyWorkWithMe from './components/WhyWorkWithMe.jsx';
+import UnderDevelopment from './pages/UnderDevelopment.jsx';
 
 
 
@@ -68,10 +69,20 @@ const App = () => {
               </>
             }
           />
+          <Route
+            path="/under-development"
+            element={
+              <>
+                <div className="pt-10"><Navbar /></div>
+                <UnderDevelopment />
+              </>
+            }
+          />
 
           {/* Route without Navbar */}
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/why-work-with-me" element={<WhyWorkWithMe />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
