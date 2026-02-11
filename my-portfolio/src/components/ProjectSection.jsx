@@ -80,13 +80,14 @@ const ProjectSection = () => {
       </div>
 
       {/* Recent Projects */}
-      <div className="bg-white shadow-md rounded-[10px] p-4">
+      <div className="bg-white shadow-md border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow duration-300">
         <div className="flex items-center mb-4">
-          <h1 className="text-2xl font-bold font-roboto border-b-2 border-blue-500 pb-1">
-            Recent Projects
+          <h1 className="text-2xl font-bold font-roboto pb-1">
+            <span className="bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">Recent Projects</span>
+            <div className="h-[2px] mt-1 w-full bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
           </h1>
-          <div className="ml-auto flex items-center text-gray-500 hover:text-blue-500 transition-colors duration-300">
-            <Link to="/under-development" className="flex items-center gap-1 font-medium">
+          <div className="ml-auto flex items-center text-slate-500 hover:text-blue-600 transition-colors duration-300">
+            <Link to="/under-development" className="flex items-center gap-1 font-medium text-sm">
               All Projects <FaArrowRightLong />
             </Link>
           </div>
@@ -99,22 +100,22 @@ const ProjectSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="group relative rounded-md overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
+              className="group relative rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={project.img}
                 alt={project.name}
-                className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
-                <h2 className="text-lg font-semibold">{project.name}</h2>
-                <p className="text-sm mt-1 px-4 text-center">{project.description}</p>
-                <div className="flex gap-2 mt-2 text-lg">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                <h2 className="text-lg font-bold text-white">{project.name}</h2>
+                <p className="text-sm mt-1 text-gray-200">{project.description}</p>
+                <div className="flex gap-2 mt-2 text-lg text-white/80">
                   {project.tech.map((icon, i) => (
                     <span key={i} className="hover:text-blue-300 transition-colors duration-200">{icon}</span>
                   ))}
                 </div>
-                <span className="mt-2 text-blue-300 text-sm">View Project →</span>
+                <span className="mt-2 text-blue-400 text-sm font-medium">View Project →</span>
               </div>
             </a>
           ))}

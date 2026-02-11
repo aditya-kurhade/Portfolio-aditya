@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     // Simulate initial loading or replace with your actual loading logic
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds loader
+    const timer = setTimeout(() => setLoading(false), 6200); // Matches signature animation duration
     return () => clearTimeout(timer);
   }, []);
 
@@ -27,7 +27,7 @@ const App = () => {
     <div
       style={{
         minHeight: '100vh',
-        background: "linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%)"
+        background: "linear-gradient(135deg, #f8faff 0%, #f0f4ff 30%, #ffffff 70%, #faf5ff 100%)"
       }}
     >
       <BrowserRouter>

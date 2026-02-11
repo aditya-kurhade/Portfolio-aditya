@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md px-4 sm:px-8 rounded-lg max-w-screen-xl mx-auto">
+    <nav className="bg-white/80 backdrop-blur-md shadow-sm border border-gray-100 px-4 sm:px-8 rounded-xl max-w-screen-xl mx-auto">
       <div className="flex justify-between items-center w-full">
 
         {/* Left - Logo */}
@@ -42,13 +42,13 @@ const Navbar = () => {
                   className={`relative transition-colors duration-200 group flex items-center 
                     ${
                       isActive
-                        ? "text-blue-600 font-semibold"
-                        : "text-gray-600 hover:text-black"
+                        ? "text-blue-700 font-semibold"
+                        : "text-slate-600 hover:text-slate-900"
                     }`}
                 >
                   {item.icon} {item.name}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-blue-500 transition-all duration-300 
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 
                     ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
                   ></span>
                 </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
         {/* Desktop Button */}
         <div className="hidden md:block">
           <Link to="/contact">
-            <button className="text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 shadow-md transition-all duration-300 rounded-md px-6 py-2 font-medium">
+            <button className="text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all duration-300 rounded-lg px-6 py-2 font-medium">
               Let's Talk
             </button>
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 key={index}
                 to={item.path}
                 className={`flex items-center transition-colors duration-200 ${
-                  isActive ? "text-blue-600 font-semibold" : "hover:text-blue-500"
+                  isActive ? "text-blue-700 font-semibold" : "text-slate-600 hover:text-slate-900"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -94,7 +94,7 @@ const Navbar = () => {
             );
           })}
           <Link to="/contact" onClick={() => setIsOpen(false)}>
-            <button className="w-full text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 shadow-md transition-all duration-300 rounded-md px-6 py-2 font-medium">
+            <button className="w-full text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all duration-300 rounded-lg px-6 py-2 font-medium">
               Let's Talk
             </button>
           </Link>

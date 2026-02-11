@@ -38,14 +38,14 @@ const WhyWorkWithMe = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 sm:py-20 px-4 sm:px-6 lg:px-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-10 sm:py-20 px-4 sm:px-6 lg:px-20">
       {/* Back to Home Button */}
       <div className="mb-4 sm:mb-6 lg:mb-10">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-blue-600 hover:text-blue-800 transition"
         >
-          <FaArrowLeft /> Back to Home
+          <FaArrowLeft /> <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Back to Home</span>
         </Link>
       </div>
 
@@ -54,22 +54,24 @@ const WhyWorkWithMe = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto bg-gray-900 text-white p-6 sm:p-10 rounded-2xl shadow-xl"
+        className="max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white p-6 sm:p-10 rounded-2xl shadow-2xl border border-white/5"
       >
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-          🚀 Why Hire Me?
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+          Why Hire Me?
         </h2>
 
         <ul className="space-y-4 sm:space-y-6 lg:space-y-8 text-sm sm:text-base lg:text-lg leading-relaxed">
           {points.map((point, idx) => (
             <motion.li
               key={idx}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg cursor-pointer hover:bg-gray-800 transition-all duration-300"
-              whileHover={{ scale: 1.03 }}
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl cursor-pointer 
+                        hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
             >
-              <div className="flex-shrink-0">{point.icon}</div>
+              <div className="flex-shrink-0 bg-white/10 p-2 rounded-lg">{point.icon}</div>
               <div>
-                <strong>{point.title}:</strong> {point.description}
+                <strong className="text-white">{point.title}:</strong>{' '}
+                <span className="text-gray-300">{point.description}</span>
               </div>
             </motion.li>
           ))}

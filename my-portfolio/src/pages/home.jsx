@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection'
-import WorkExperinceSection from '../components/WorkExperinceSection'
+import WorkExperienceSection from '../components/WorkExperienceSection'
 import ExpertSection from '../components/ExpertSection'
 import ProjectSection from '../components/ProjectSection'
 import ScrollingBanner from '../components/ScrollingBanner'
@@ -26,7 +26,7 @@ const Home = () => {
             {/* Work Experience + Expert */}
             <div className="main3-section-container flex flex-col mt-10  lg:mt-0  md:mt-0 md:ml-4 w-full md:w-1/2">
               <div className="work-experience-section-container">
-                <WorkExperinceSection />
+                <WorkExperienceSection />
               </div>
               <div className="expert-section-container mt-7">
                 <ExpertSection />

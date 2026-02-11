@@ -6,8 +6,9 @@ const ShortBanner = ({ text, link }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="bg-white text-blue-600 font-semibold px-3 py-1 rounded-md shadow-md 
-                 hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300"
+      className="bg-white/90 backdrop-blur-sm text-blue-700 font-semibold px-4 py-1.5 rounded-lg shadow-md 
+                 hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 hover:text-white hover:scale-105 
+                 transition-all duration-300 text-sm"
     >
       {text}
     </a>
