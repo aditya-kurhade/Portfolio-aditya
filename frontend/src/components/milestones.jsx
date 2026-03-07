@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Milestones = () => {
   const achievements = [
+    "IIIT Hyadrabad ACM Winter School 2025 selection",
     "GFG Ideathon Winner",
     "Best ACM Member (Technical Team)",
     "1st Position - Web Development Competition",
@@ -18,6 +19,7 @@ const Milestones = () => {
     { title: "Teaching Assistent - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754835339/Teaching_Assistant_lkohb7.png" },
     { title: "Responsive website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836016/Responsive_web_page-0001_pws9j2.jpg" },
     { title: "Static Website - NxtWave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1754836017/Static_web_page-0001_a78uln.jpg" },
+    { title: "MY SQl - Nxtwave", img: "https://res.cloudinary.com/dbd5zow1e/image/upload/v1770788203/SQL_Certificate_page-0001_koltws.jpg" },
   ];
 
   return (

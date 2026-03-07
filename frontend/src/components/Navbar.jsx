@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FiHome, FiUser, FiFolder, FiMail } from "react-icons/fi"; // ✅ Feather Icons
+import { FaTrophy } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,8 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/", icon: <FiHome className="inline mr-2" /> },
     { name: "About", path: "/about", icon: <FiUser className="inline mr-2" /> },
-    { name: "Project", path: "/under-development", icon: <FiFolder className="inline mr-2" /> },
+    { name: "Project", path: "/project", icon: <FiFolder className="inline mr-2" /> },
+    { name: "Milestones", path: "/milestones", icon: <FaTrophy className="inline mr-2 text-yellow-500" /> },
     { name: "Contact", path: "/contact", icon: <FiMail className="inline mr-2" /> },
   ];
 

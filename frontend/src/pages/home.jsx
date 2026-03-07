@@ -5,12 +5,17 @@ import ExpertSection from '../components/ExpertSection'
 import ProjectSection from '../components/ProjectSection'
 import ScrollingBanner from '../components/ScrollingBanner'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 
 const Home = () => {
   return (
     <>
-      <div className="home-container flex flex-col lg:flex-row justify-center gap-5 lg:pt-7 px-4 lg:mr-16 lg:ml-22">
+      <div className="relative min-h-screen bg-[#f5f2ed]">
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(14,116,144,0.12),_transparent_55%)]"></div>
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_80%_30%,_rgba(234,88,12,0.12),_transparent_45%)]"></div>
+        <div className="relative z-10 pt-10"><Navbar /></div>
+        <div className="relative z-10 home-container flex flex-col lg:flex-row justify-center gap-5 lg:pt-7 px-4 lg:mr-16 lg:ml-22">
         
         {/* Left Side - Main Sections */}
         <div className="main-section-container flex flex-col w-full lg:w-210">
@@ -46,8 +51,10 @@ const Home = () => {
           <ProjectSection />
         </div>
 
+        </div>
+        <Footer />
       </div>
-      <Footer />
+      
     </>
   )
 }
