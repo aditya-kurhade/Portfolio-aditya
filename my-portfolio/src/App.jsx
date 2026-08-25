@@ -12,6 +12,8 @@ import UnderDevelopment from './pages/UnderDevelopment.jsx';
 
 
 
+import VersionBanner from './components/VersionBanner.jsx';
+
 const AppContent = () => {
   const [loading, setLoading] = useState(true);
 
@@ -29,6 +31,7 @@ const AppContent = () => {
         background: "linear-gradient(135deg, #f8faff 0%, #f0f4ff 30%, #ffffff 70%, #faf5ff 100%)"
       }}
     >
+      <VersionBanner />
       <Routes>
         {/* Routes with Navbar */}
         <Route
